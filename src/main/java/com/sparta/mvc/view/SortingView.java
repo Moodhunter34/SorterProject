@@ -18,17 +18,18 @@ public class SortingView {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Type b for using Bubblesort method, type q for using Quicksort method: or e to Exit.");
+            System.out.println("Type 'b' for using Bubblesort method\ntype 'q' for using Quicksort method\ntype 'both' to compare performance\n or 'e' to Exit.");
             Scanner scanner = new Scanner(System.in);
             String pick = scanner.next().toLowerCase();
-            if (pick.equals("b") || pick.equals("q")) {
-                System.out.println("Type a for using Arrays or type l for using Lists");
+            if (pick.equals("b") || pick.equals("q") || pick.equals("both")) {
+                System.out.println("Type 'a' for sorting Arrays or type 'l' for sorting Lists");
                 String type = scanner.next().toLowerCase();
                 if (type.equals("a") || (type.equals("l"))) {
                     SortController.sortMethodPick(pick, type);
                 }
             } else if (pick.equals("e")) {
                 exit = true;
+                System.out.println("Exit completed");
             } else {
                 System.out.println("You typed in the wrong letter");
             }
@@ -48,13 +49,13 @@ public class SortingView {
         System.out.println("");
     }
 
-    public static void displayArray(int[] array) {
-        System.out.println("Sorted Array: " + Arrays.toString(array));
+    public static void displayArray(int[] array, String sortType) {
+        System.out.println(sortType +"Sorted Array: " + Arrays.toString(array));
         endTime = System.nanoTime();
         System.out.println("Time taken: " + (endTime - startTime) + " nano seconds");
     }
 
-    public static void displayArrayList(ArrayList<Integer> arrayList) {
+    public static void displayArrayList(ArrayList<Integer> arrayList, String sortType) {
         System.out.println("Sorted ArrayList: " + arrayList);
         endTime = System.nanoTime();
         System.out.println("Time taken: " + (endTime - startTime) + " nano seconds");
