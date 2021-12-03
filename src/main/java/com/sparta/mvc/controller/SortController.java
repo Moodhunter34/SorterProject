@@ -23,6 +23,7 @@ public class SortController {
         if (pick.equals("b") || pick.equals("both")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("b").sort(myArray), "BubbleSort ");
+                System.out.println("");
 
             } else {
                 SortingView.displayArrayList(SorterFactory.sorterFactory("b").sort(myList), "BubbleSort ");
@@ -31,6 +32,7 @@ public class SortController {
         } if (pick.equals("q") || pick.equals("both")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("q").sort(myArray), "Quicksort ");
+                System.out.println("");
 
             } else {
                 SortingView.displayArrayList(SorterFactory.sorterFactory("q").sort(myList), "Quicksort ");

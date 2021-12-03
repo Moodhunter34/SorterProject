@@ -7,7 +7,6 @@ public class RandomSelection {
     private static Random random = new Random(100);
 
     public static int[] randomGenerator() {
-
         int[] myArray = new int[100];
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = random.nextInt(100);

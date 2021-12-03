@@ -10,35 +10,51 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 
 public class BubbleSorterTest {
 
-
-    BubbleSorter bs = new BubbleSorter();
-    int[] emptyArray = {};
-    int[] array = {5, 7, 4, 3, 8, 9, 12, 4, 2, 5, 1, 8};
-    int[] expectedArray = {1, 2, 3, 4, 4, 5, 5, 7, 8, 8, 9, 12};
+    private BubbleSorter bubbleSorter;
+    private RandomSelection randomSelection;
+    int[] myArray;
+    int[] myEmptyArray;
+    int[] getArrayWithDuplicates = {2, 1, 4, 5, 9, 1, 2, 9, 8, 2};
 
     @BeforeEach
-    public void setup(){
-        System.out.println("Before test");
+    public void setup() {
+        bubbleSorter = new BubbleSorter();
+        randomSelection = new RandomSelection();
+        myArray = RandomSelection.randomGenerator();
     }
 
+    @DisplayName("Duplicates testing")
+    @Test
+    public void duplicatesTest() {
+        bubbleSorter.sort(getArrayWithDuplicates);
+        int[] expectedArray = {1, 1, 2, 2, 2, 4, 5, 8, 9, 9};
+        assertArrayEquals(expectedArray, getArrayWithDuplicates);
+    }
 
     @DisplayName("Testing Bubblesort method")
     @Test
     public void bubbleSortTest() {
-        int[] result = bs.sort(array);
-        assertArrayEquals(expectedArray, result);
+        int[] array = myArray;
+        bubbleSorter.sort(myArray);
+        Arrays.sort(array);
+        assertArrayEquals(array, myArray);
     }
 
+//    @DisplayName("Empty Array testing")
+//    @Test
+//    public void arrayEmptyTest(){
+//        int[] m =bubbleSorter.sort(myEmptyArray);
+//        assertNull(m, myEmptyArray);
+//    }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         System.out.println("After tests");
     }
 
