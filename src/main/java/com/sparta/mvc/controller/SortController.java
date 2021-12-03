@@ -1,9 +1,12 @@
 package com.sparta.mvc.controller;
 
+import com.sparta.mvc.model.Logging;
 import com.sparta.mvc.model.RandomSelection;
 import com.sparta.mvc.model.SorterFactory;
 import com.sparta.mvc.view.SortingView;
 import java.util.*;
+import com.sparta.mvc.model.Logging.*;
+
 
 public class SortController {
 
@@ -23,6 +26,7 @@ public class SortController {
         if (pick.equals("b") || pick.equals("both")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("b").sort(myArray), "BubbleSort ");
+
                 System.out.println("");
 
             } else {
@@ -36,7 +40,7 @@ public class SortController {
 
             } else {
                 SortingView.displayArrayList(SorterFactory.sorterFactory("q").sort(myList), "Quicksort ");
-
+                System.out.println("");
             }
 
         }

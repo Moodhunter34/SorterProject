@@ -2,26 +2,31 @@ package com.sparta.mvc.view;
 
 import com.sparta.mvc.controller.SortController;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+
+
+import static com.sparta.mvc.model.Logging.*;
 
 public class SortingView {
 
     static long startTime;
     static long endTime;
 
-    // Implement the Exit method, and if user input is not valid
 
     public static void displayMenu() {
 
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("Type 'b' for using Bubblesort method\ntype 'q' for using Quicksort method\ntype 'both' to compare performance\n or 'e' to Exit.");
+            System.out.println(options);
             Scanner scanner = new Scanner(System.in);
             String pick = scanner.next().toLowerCase();
             if (pick.equals("b") || pick.equals("q") || pick.equals("both")) {
+
+
                 System.out.println("Type 'a' for sorting Arrays or type 'l' for sorting Lists");
                 String type = scanner.next().toLowerCase();
                 if (type.equals("a") || (type.equals("l"))) {
@@ -29,9 +34,10 @@ public class SortingView {
                 }
             } else if (pick.equals("e")) {
                 exit = true;
-                System.out.println("Exit completed");
+                System.out.println(exitMessage);
             } else {
                 System.out.println("You typed in the wrong letter");
+                System.out.println("");
             }
         }
     }
@@ -40,7 +46,6 @@ public class SortingView {
         System.out.println("Unsorted Array is : " + Arrays.toString(array));
         startTime = System.nanoTime();
         System.out.println("");
-
     }
 
     public static void displayUnsortedArrayList(ArrayList<Integer> arrayList) {
