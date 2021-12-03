@@ -15,29 +15,25 @@ public class SortingView {
 
     public static void displayMenu() {
 
-        System.out.println("Type b for Bubblesort, q for Quicksort: or e to Exit.");
-        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
 
-        String pick = scanner.next().toLowerCase();
-        System.out.println("Type a for Array or l for List");
-
-        String type = scanner.next().toLowerCase();
-
-        if (pick.equals("b") || pick.equals("q")) {
-            if (type.equals("a") || (type.equals("l"))) {
-                SortController.sortMethodPick(pick, type);
-
+        while (!exit) {
+            System.out.println("Type b for using Bubblesort method, type q for using Quicksort method: or e to Exit.");
+            Scanner scanner = new Scanner(System.in);
+            String pick = scanner.next().toLowerCase();
+            if (pick.equals("b") || pick.equals("q")) {
+                System.out.println("Type a for using Arrays or type l for using Lists");
+                String type = scanner.next().toLowerCase();
+                if (type.equals("a") || (type.equals("l"))) {
+                    SortController.sortMethodPick(pick, type);
+                }
+            } else if (pick.equals("e")) {
+                exit = true;
+            } else {
+                System.out.println("You typed in the wrong letter");
             }
-
-
-        } else if (pick.equals("e")) {
-            System.exit(0);
-        } else {
-            displayMenu();
         }
-
     }
-
 
     public static void displayUnsortedArray(int[] array) {
         System.out.println("Unsorted Array is : " + Arrays.toString(array));

@@ -1,7 +1,7 @@
 package com.sparta.mvc.test;
 
 
-import com.sparta.mvc.model.QuickSort;
+import com.sparta.mvc.model.QuickSorter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class QuickSorterTest {
 
-    QuickSort qs = new QuickSort();
+    QuickSorter qs = new QuickSorter();
 
     int[] array = {5, 7, 4, 3, 8, 9, 12, 4, 2, 5, 1, 8};
     int[] expectedArray = {1, 2, 3, 4, 4, 5, 5, 7, 8, 8, 9, 12};

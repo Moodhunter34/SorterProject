@@ -8,7 +8,7 @@ public class SorterFactory {
         if (pick.equals("b")) {
             return new BubbleSorter();
         } else if (pick.equals("q")) {
-            return new QuickSort();
+            return new QuickSorter();
         } else {
             return null;
         }

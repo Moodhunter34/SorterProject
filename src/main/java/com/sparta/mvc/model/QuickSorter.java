@@ -2,7 +2,7 @@ package com.sparta.mvc.model;
 
 import java.util.ArrayList;
 
-public class QuickSort<T extends Comparable<? super T>> implements Sorter<T> {
+public class QuickSorter<T extends Comparable<? super T>> implements Sorter<T> {
 
 
     @Override

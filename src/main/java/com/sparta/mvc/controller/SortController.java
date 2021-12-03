@@ -17,6 +17,7 @@ public class SortController {
             SortingView.displayUnsortedArrayList(myList);
         }
 
+
         if (pick.equals("b")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("b").sort(myArray));
@@ -35,6 +36,7 @@ public class SortController {
             }
 
         }
+
 
     }
 }
