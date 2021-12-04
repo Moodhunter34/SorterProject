@@ -46,19 +46,17 @@ public class BubbleSorterTest {
         assertArrayEquals(array, myArray);
     }
 
-//    @DisplayName("Empty Array testing")
-//    @Test
-//    public void arrayEmptyTest(){
-//        int[] m =bubbleSorter.sort(myEmptyArray);
-//        assertNull(m, myEmptyArray);
-//    }
+    @DisplayName("Empty Array testing")
+    @Test
+    public void arrayEmptyTest(){
+        bubbleSorter.sort(myEmptyArray);
+        assertNull(myEmptyArray);
+    }
 
     @AfterEach
     public void tearDown() {
         System.out.println("After tests");
     }
-
-
 
 
 }

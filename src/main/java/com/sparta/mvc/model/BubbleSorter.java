@@ -7,6 +7,9 @@ public class BubbleSorter <T extends Comparable<? super T>> implements Sorter<T>
 
     // generics for arrays
     public T[] sort(T[] arr) {
+        if(arr == null){
+            return arr;
+        }
         int len = arr.length; //length of the array
 
         for (int i = 0; i < (len - 1); i++) {   //for loop for the array
@@ -42,6 +45,9 @@ public class BubbleSorter <T extends Comparable<? super T>> implements Sorter<T>
     // Array bubble sorting
     @Override
     public int[] sort(int[] arr) {
+        if(arr == null){
+            return arr;
+        }
         int len = arr.length; //length of the array
 
         for (int i = 0; i < (len - 1); i++) {   //for loop for the array
@@ -56,22 +62,6 @@ public class BubbleSorter <T extends Comparable<? super T>> implements Sorter<T>
         return arr;
     }
 
-//    @Override
-//    public ArrayList<Integer> sort(ArrayList<Integer> arrayList) {
-//        int n = arrayList.size(); //len Array
-//        int temp = 0;
-//
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 1; j < n; j++) {
-//                if (arrayList.get(j - 1) > arrayList.get(j)) {
-//                    temp = arrayList.get(j - 1);
-//                    arrayList.set(j - 1, arrayList.get(j));
-//                    arrayList.set(j, temp);
-//                }
-//            }
-//        }
-//        return arrayList;
-//    }
 
 
 }

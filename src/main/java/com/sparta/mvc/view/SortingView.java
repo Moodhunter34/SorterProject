@@ -1,6 +1,7 @@
 package com.sparta.mvc.view;
 
 import com.sparta.mvc.controller.SortController;
+import com.sparta.mvc.model.Logging;
 
 
 import java.util.ArrayList;
@@ -12,8 +13,8 @@ import static com.sparta.mvc.model.Logging.*;
 
 public class SortingView {
 
-    static long startTime;
-    static long endTime;
+    private static long startTime;
+    private static long endTime;
 
 
     public static void displayMenu() {
@@ -24,20 +25,21 @@ public class SortingView {
             System.out.println(options);
             Scanner scanner = new Scanner(System.in);
             String pick = scanner.next().toLowerCase();
-            if (pick.equals("b") || pick.equals("q") || pick.equals("both")) {
+            if (pick.equals("b") || pick.equals("q") || pick.equals("t") || pick.equals("both")) {
 
 
-                System.out.println("Type 'a' for sorting Arrays or type 'l' for sorting Lists");
+                System.out.println(listOptions);
                 String type = scanner.next().toLowerCase();
                 if (type.equals("a") || (type.equals("l"))) {
                     SortController.sortMethodPick(pick, type);
                 }
+
             } else if (pick.equals("e")) {
                 exit = true;
-                System.out.println(exitMessage);
+                Logging.logger.info(exitMessage);
             } else {
-                System.out.println("You typed in the wrong letter");
-                System.out.println("");
+                Logging.logger.warn(invalidInput);
+                System.out.println();
             }
         }
     }
@@ -45,17 +47,17 @@ public class SortingView {
     public static void displayUnsortedArray(int[] array) {
         System.out.println("Unsorted Array is : " + Arrays.toString(array));
         startTime = System.nanoTime();
-        System.out.println("");
+        System.out.println();
     }
 
     public static void displayUnsortedArrayList(ArrayList<Integer> arrayList) {
         System.out.println("Unsorted ArrayList: " + arrayList);
         startTime = System.nanoTime();
-        System.out.println("");
+        System.out.println();
     }
 
     public static void displayArray(int[] array, String sortType) {
-        System.out.println(sortType +"Sorted Array: " + Arrays.toString(array));
+        System.out.println(sortType + "Sorted Array: " + Arrays.toString(array));
         endTime = System.nanoTime();
         System.out.println("Time taken: " + (endTime - startTime) + " nano seconds");
     }
