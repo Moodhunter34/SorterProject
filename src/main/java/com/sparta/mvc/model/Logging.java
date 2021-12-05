@@ -12,7 +12,7 @@ public class Logging {
     public static final String options = ("Type 'b' for using Bubblesort method,\n" +
             "type 'q' for using Quicksort method,\n" +
             "if you want compare performance between Bubblesort and Quicksort methods type 'c',\n" +
-            "or 't' for Binary Sort Tree method,\n'e' to Exit.");
+            "or type 't' for Binary Sort Tree method,\ntype 'e' to Exit.");
 
 
     public static final String listOptions = "Type 'a' for sorting Arrays, or type 'l' for sorting Lists";

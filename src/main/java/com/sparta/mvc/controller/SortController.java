@@ -7,7 +7,6 @@ import com.sparta.mvc.view.SortingView;
 
 import java.util.*;
 
-import com.sparta.mvc.model.Logging.*;
 import com.sparta.mvc.model.BinaryTreeSorter;
 
 import static com.sparta.mvc.model.Logging.*;
@@ -70,6 +69,7 @@ public class SortController {
                 System.out.print("[");
                 tree.inOrder(tree.root);
                 System.out.print("]");
+                System.out.println();
             } else {
 
                 for (int i = 0; i < myList.size(); i++) {
@@ -79,7 +79,7 @@ public class SortController {
                 System.out.print("[");
                 tree.inOrder(tree.root);
                 System.out.print("]");
-
+                System.out.println();
             }
 
         }
