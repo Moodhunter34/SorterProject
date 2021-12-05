@@ -1,7 +1,6 @@
 package com.sparta.mvc.test;
 
 
-import com.sparta.mvc.model.BubbleSorter;
 import com.sparta.mvc.model.QuickSorter;
 import com.sparta.mvc.model.RandomSelection;
 import org.junit.jupiter.api.AfterEach;
@@ -11,9 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QuickSorterTest {
 
@@ -47,11 +44,12 @@ public class QuickSorterTest {
         assertArrayEquals(array, myArray);
     }
 
-//    @DisplayName("Empty Array Testing")
-//    @Test
-//    public void arrayEmptyTest(){
-//
-//    }
+    @DisplayName("Empty Array Testing")
+    @Test
+    public void arrayEmptyTest(){
+        quickSorter.sort(myEmptyArray);
+        assertNull(myEmptyArray);
+    }
 
 
     @AfterEach

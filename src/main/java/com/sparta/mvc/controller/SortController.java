@@ -10,8 +10,7 @@ import java.util.*;
 import com.sparta.mvc.model.Logging.*;
 import com.sparta.mvc.model.BinaryTreeSorter;
 
-import static com.sparta.mvc.model.Logging.bubblePick;
-import static com.sparta.mvc.model.Logging.quicksortPick;
+import static com.sparta.mvc.model.Logging.*;
 
 
 public class SortController {
@@ -26,16 +25,19 @@ public class SortController {
         } else {
             SortingView.displayUnsortedArrayList(myList);
         }
-        
+
         if (pick.equals("b") || pick.equals("both")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("b").sort(myArray), "BubbleSort ");
                 Logging.logger.info(bubblePick);
+                Logging.logger.info(arraysSortingPick);
                 System.out.println();
 
             } else {
                 SortingView.displayArrayList(SorterFactory.sorterFactory("b").sort(myList), "BubbleSort ");
                 Logging.logger.info(bubblePick);
+                Logging.logger.info(listsSortingPick);
+                System.out.println();
             }
 
         }
@@ -44,24 +46,27 @@ public class SortController {
                 SortingView.displayArray(SorterFactory.sorterFactory("q").sort(myArray), "Quicksort ");
                 System.out.println();
                 Logging.logger.info(quicksortPick);
+                Logging.logger.info(arraysSortingPick);
 
             } else {
                 SortingView.displayArrayList(SorterFactory.sorterFactory("q").sort(myList), "Quicksort ");
                 System.out.println();
                 Logging.logger.info(quicksortPick);
+                Logging.logger.info(listsSortingPick);
             }
 
         }
-        if (pick.equals("t") || pick.equals("both")) {
-            System.out.println("test");
+        if (pick.equals("t")) {
+            Logging.logger.info(binaryTreePick);
             BinaryTreeSorter tree = new BinaryTreeSorter();
             if (type.equals("a")) {
-                System.out.println("test2");
+
 
                 for (int i = 0; i < myArray.length; i++) {
                     tree.createTree(myArray[i]);
 
                 }
+                System.out.println("Sorted array is: ");
                 System.out.print("[");
                 tree.inOrder(tree.root);
                 System.out.print("]");

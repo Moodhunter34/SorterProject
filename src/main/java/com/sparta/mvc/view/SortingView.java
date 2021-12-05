@@ -28,7 +28,7 @@ public class SortingView {
             if (pick.equals("b") || pick.equals("q") || pick.equals("t") || pick.equals("both")) {
 
 
-                System.out.println(listOptions);
+                System.out.print(listOptions);
                 String type = scanner.next().toLowerCase();
                 if (type.equals("a") || (type.equals("l"))) {
                     SortController.sortMethodPick(pick, type);
