@@ -1,7 +1,3 @@
-
-
-
-
 # Project Title
 
 Sort Manager Project
@@ -45,25 +41,28 @@ When choosing the type, the results are shown below. The Unsorted Array and belo
 
 Folder Structure
 
-![Folder structure](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Folder structure.png)
-
-
+![](scrnshots/Folder%20structure.png)
 
 
 
 Getting Started
 
-![alt text](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Getting Started.png)
+![](scrnshots/Getting%20Started.png)
 
-![Getting Started](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Getting Started.png)
+Bubble Sorting Array example
 
-// screen shots from the application
+![](scrnshots/Bubblesort%20array%20sorting.png)
 
-// Logging comments
+Comparing methods
+
+![](scrnshots/InkedComparing%20methods_LI.jpg)
+
+
+
+
 
 #Unit Tests
-These tests, test the algorithms if the Array or List is null, or if there are any duplicate values. It also tests
-the functionality of the algorithms. This happens with dummy values, empty arrays and with assertions.
+These tests, test the algorithms if the Array or List is null, or if there are any duplicate values. It also tests the functionality of the algorithms. This happens with dummy values, empty arrays and with assertions.
 There are several types of assertions, but the main ones are assertEquals, assertArrayEquals, assertNull, assertNotNull, assertTrue.
 
 
