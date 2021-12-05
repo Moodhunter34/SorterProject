@@ -53,6 +53,8 @@ Folder Structure
 
 Getting Started
 
+![alt text](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Getting Started.png)
+
 ![Getting Started](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Getting Started.png)
 
 // screen shots from the application
