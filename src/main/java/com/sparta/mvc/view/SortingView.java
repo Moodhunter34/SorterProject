@@ -18,20 +18,23 @@ public class SortingView {
 
 
     public static void displayMenu() {
-
+        System.out.println(welcome);
+        System.out.println();
         boolean exit = false;
 
         while (!exit) {
             System.out.println(options);
             Scanner scanner = new Scanner(System.in);
             String pick = scanner.next().toLowerCase();
-            if (pick.equals("b") || pick.equals("q") || pick.equals("t") || pick.equals("both")) {
+            if (pick.equals("b") || pick.equals("q") || pick.equals("t") || pick.equals("c")) {
 
 
                 System.out.print(listOptions);
                 String type = scanner.next().toLowerCase();
                 if (type.equals("a") || (type.equals("l"))) {
                     SortController.sortMethodPick(pick, type);
+                } else {
+                    Logging.logger.warn(invalidInput);
                 }
 
             } else if (pick.equals("e")) {

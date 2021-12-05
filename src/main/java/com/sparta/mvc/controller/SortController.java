@@ -15,7 +15,6 @@ import static com.sparta.mvc.model.Logging.*;
 
 public class SortController {
 
-
     public static void sortMethodPick(String pick, String type) {
         int[] myArray = RandomSelection.randomGenerator();
         ArrayList<Integer> myList = RandomSelection.randomGeneratorArrList();
@@ -26,7 +25,8 @@ public class SortController {
             SortingView.displayUnsortedArrayList(myList);
         }
 
-        if (pick.equals("b") || pick.equals("both")) {
+
+        if (pick.equals("b") || pick.equals("c")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("b").sort(myArray), "BubbleSort ");
                 Logging.logger.info(bubblePick);
@@ -41,7 +41,7 @@ public class SortController {
             }
 
         }
-        if (pick.equals("q") || pick.equals("both")) {
+        if (pick.equals("q") || pick.equals("c")) {
             if (type.equals("a")) {
                 SortingView.displayArray(SorterFactory.sorterFactory("q").sort(myArray), "Quicksort ");
                 System.out.println();
@@ -57,8 +57,8 @@ public class SortController {
 
         }
         if (pick.equals("t")) {
-            Logging.logger.info(binaryTreePick);
             BinaryTreeSorter tree = new BinaryTreeSorter();
+            Logging.logger.info(binaryTreePick);
             if (type.equals("a")) {
 
 
@@ -75,6 +75,7 @@ public class SortController {
                 for (int i = 0; i < myList.size(); i++) {
                     tree.createTree(myList.get(i));
                 }
+                System.out.println("Sorted array is: ");
                 System.out.print("[");
                 tree.inOrder(tree.root);
                 System.out.print("]");
