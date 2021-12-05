@@ -45,7 +45,7 @@ When choosing the type, the results are shown below. The Unsorted Array and belo
 
 Folder Structure
 
-![Folder structure](C:\Users\nikos\Desktop\read me files\Folder structure.png)
+![Folder structure](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Folder structure.png)
 
 
 
@@ -53,9 +53,7 @@ Folder Structure
 
 Getting Started
 
-![Getting Started](C:\Users\nikos\Desktop\read me files\Getting Started.png)
-
-
+![Getting Started](C:\Users\nikos\IdeaProjects\BubbleSorting\scrnshots\Getting Started.png)
 
 // screen shots from the application
 
