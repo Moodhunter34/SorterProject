@@ -1,4 +1,4 @@
-package com.sparta.mvc.controller;
+package com.sparta.mvc;
 
 
 import com.sparta.mvc.view.SortingView;
